@@ -11,7 +11,8 @@ export default new Vuex.Store({
   },
   getters: {
     name: (state) => state.app_name,
-    status: (state) => state.status
+    status: (state) => state.status,
+    all: state => state.links
   },
   mutations: {
     addLink(state, link) {
@@ -30,7 +31,7 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    postLink({commit}, link) {
+    postLink({ commit }, link) {
       setTimeout(() => {
         commit('addLink', link)
         commit('statusSuccess')

@@ -32,7 +32,8 @@ export default {
         url: '',
         description: ''
       },
-      loading: false
+      loading: false,
+      links: []
     }
   },
   methods: {
@@ -60,7 +61,6 @@ export default {
   watch: {
     status(value) {
       if(value != null) {
-        alert(value)
         if(value == 'success') {
           this.link = {
             title: '',
@@ -89,7 +89,7 @@ export default {
   text-align: left;
 }
 .form_item > label {
-  color: palevioletred;
+  color: green;
   font-weight: 700;
   font-size: 21px;
   text-align: left;
@@ -99,14 +99,14 @@ export default {
   margin-top: 1rem;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid palevioletred;
-  color: palevioletred;
+  border: 1px solid green;
+  color: green;
   padding: 0.75rem 1rem;
   font-size: 16px;
   border-radius: 4px;
 }
 *::placeholder {
-  color: palevioletred;
+  color: green;
   opacity: 0.3;
 }
 .form_button {
@@ -114,7 +114,7 @@ export default {
   box-sizing: border-box;
   padding: 1rem;
   color: #ffffff;
-  background: palevioletred;
+  background: green;
   border-radius: 8px;
   font-size: 16px;
 }
